@@ -40,7 +40,15 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="subtitle">About Me</h1>
-                    <p class="subtitle-text"> I am Sudhanshu Sharma and I am 22 years old now, currently pursuing B.Tech from Academy Of Technology which is under MAKAUT university. My residency is Kolkata. My portfolio is a representation of all I've learned and accomplished as a science student and as a human being. As a student I learnt things theoretically but I always keep myself ready to implement them in a practical problem solution.  My goal in life is to become a valuable human being in every aspect of life. Hard-work, Self-confidence and positivity are the things which I consider as strengths of my personality. Talking about academics, My final year B.tech project is "IOT based speed control and monitoring of BLDC motor". I do coding in Java programming language and lastly, I love to learn new technologies. </p>
+                    <p class="subtitle-text"> I am Sudhanshu Sharma and I am 22 years old now, currently pursuing B.Tech
+                        from Academy Of Technology which is under MAKAUT university. My residency is Kolkata. My
+                        portfolio is a representation of all I've learned and accomplished as a science student and as a
+                        human being. As a student I learnt things theoretically but I always keep myself ready to
+                        implement them in a practical problem solution. My goal in life is to become a valuable human
+                        being in every aspect of life. Hard-work, Self-confidence and positivity are the things which I
+                        consider as strengths of my personality. Talking about academics, My final year B.tech project
+                        is "IOT based speed control and monitoring of BLDC motor". I do coding in Java programming
+                        language and lastly, I love to learn new technologies. </p>
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -94,7 +102,8 @@
                     </div>
                     <div class="tab-contents" id="interests">
                         <ul>
-                            <li><span>Listening Musics (especially indian rap, ghazals and devotional musics).</span></li>
+                            <li><span>Listening Musics (especially indian rap, ghazals and devotional musics).</span>
+                            </li>
                             <li><span>Watching Movies with family and friends.</span></li>
                             <li><span>Playing Volleyball.</span></li>
                             <li><span>Playing Chess.</span></li>
@@ -118,19 +127,24 @@
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Real life Coding Solutions</h2>
-                    <p>Humans are pattern-matching machines. To solve problem, We take help of technologies and Solving by implementation of Programming Languages is one of them. I do coding in JAVA and python. I use platforms like Codechef and leetcode to practice and enhance my profeciency in coding background. </p>
+                    <p>Humans are pattern-matching machines. To solve problem, We take help of technologies and Solving
+                        by implementation of Programming Languages is one of them. I do coding in JAVA and python. I use
+                        platforms like Codechef and leetcode to practice and enhance my profeciency in coding
+                        background. </p>
                     <a href="#">learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-crop"></i>
                     <h2>Web Development</h2>
-                    <p>I am a Frontend Web Developer. I am skilled in HTML, CSS and JavaScript for Frontend Development. I learnt about PHP and databases like MySQL. </p>
+                    <p>I am a Frontend Web Developer. I am skilled in HTML, CSS and JavaScript for Frontend Development.
+                        I learnt about PHP and databases like MySQL. </p>
                     <a href="#">learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                     <h2>Web Design</h2>
-                    <p>Designing a beautiful website is the thing which attracts me alot. I love designing different types of sites with variety of Functionalities.</p>
+                    <p>Designing a beautiful website is the thing which attracts me alot. I love designing different
+                        types of sites with variety of Functionalities.</p>
                     <a href="#">learn more</a>
                 </div>
             </div>
@@ -189,7 +203,13 @@
                                 class="fa-brands fa-square-twitter"></i></a>
                         <a href="https://wa.me/+919875333892"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
-                    <a href="https://drive.google.com/file/d/1FyOwWDooLAxmTjfw6b8mSppb9quN0eFf/view?usp=drivesdk" class="btn btn2" download="">Download CV</a>
+                    <form action="" id="cv" name="cv">
+                            <a href="images/cv edited (1) (2) (1).pdf" class="btn btn2" download="">Download CV
+                            <input type="text" name="click" id="downloadtime">
+                        </a>
+                        </form>
+                        <a href="images/cv edited (1) (2) (1).pdf" id="db" download=""></a>
+                        <a href="tel:+919875333892" id="db2"></a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
@@ -210,8 +230,8 @@
     </div>
 
     <script src="script.js"></script>
-    <form name="submit-to-google-sheet">
-    </form>
+    <!-- <form name="submit-to-google-sheet">
+    </form> -->
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxt0z6BMkL__DFH5bx2BodWmWplbgjnEDvQ0MlyF10LqOUXwLBuiLdf_23fGwrnAnK_DQ/exec'
@@ -230,6 +250,22 @@
                     form.reset();
                 })
                 .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script>
+        const scriptURL2 = 'https://script.google.com/macros/s/AKfycbyrgr6JLA2nAmNr4VFoZ9Zw0zG7Dd5Fu_lo9LsTHcPGkBX4OHlS2oq6-LyC0hxHnX_D/exec';
+        const form2 = document.forms['cv'];
+
+        form2.addEventListener('click', e => {
+            const date = new Date();
+            document.getElementById("downloadtime").value = date;
+            e.preventDefault()
+            fetch(scriptURL2, { method: 'POST', body: new FormData(form2) })
+
+                .catch(error => console.error('Error!', error.message))
+
+            document.getElementById("db").click();
+            document.getElementById("db2").click();
         })
     </script>
 </body>
