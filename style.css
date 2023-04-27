@@ -412,3 +412,6 @@ nav .fas{
     color: aqua;
     line-height: 5px;
 }
+#downloadtime{
+    display: none;
+}
