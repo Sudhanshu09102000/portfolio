@@ -385,8 +385,11 @@ nav .fas{
     .tab-titles p{
         font-size: smaller;
     }
-    #about .tab-titles{
+    #about{
         overflow: scroll;
+        /* color: red; */
+        /* border: 1px solid green; */
+        position: relative;
     }
 }
 
