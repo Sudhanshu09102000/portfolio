@@ -385,7 +385,7 @@ nav .fas{
     .tab-titles p{
         font-size: smaller;
     }
-    #about .row{
+    #about .tab-titles{
         overflow: scroll;
     }
 }
