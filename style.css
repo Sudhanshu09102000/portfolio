@@ -421,3 +421,7 @@ nav .fas{
 #downloadtime{
     display: none;
 }
+#no{
+    text-decoration: none;
+    color: none;
+}
