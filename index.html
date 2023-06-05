@@ -352,7 +352,7 @@
         const scriptURL2 = 'https://script.google.com/macros/s/AKfycbyrgr6JLA2nAmNr4VFoZ9Zw0zG7Dd5Fu_lo9LsTHcPGkBX4OHlS2oq6-LyC0hxHnX_D/exec';
         const form2 = document.forms['cv'];
 
-        form2.addEventListener('click', e => {
+         function sendData() {
             const date = new Date();
             document.getElementById("downloadtime").value = date;
             e.preventDefault()
@@ -362,7 +362,7 @@
 
             document.getElementById("db").click();
             document.getElementById("db2").click();
-        })
+        }
     </script>
 </body>
 
